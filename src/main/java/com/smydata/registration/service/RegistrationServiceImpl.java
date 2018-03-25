@@ -1,6 +1,8 @@
 package com.smydata.registration.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 	}
 
 	@Override
-	public Registartion findByMobileNumber(String mobileNumber) {
+	public List<Registartion> findByMobileNumber(String mobileNumber) {
 		return registrationRepository.findByMobile(mobileNumber);
 	}
 	

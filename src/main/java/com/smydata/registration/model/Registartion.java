@@ -13,6 +13,8 @@ public class Registartion {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	private long registrationid;
+	@Column(name="owner_reg_id")
+	private long ownerRegId;
 	@Column(name="companyname")
 	private String companyName;
 	@Column(name="ownername")
@@ -25,6 +27,8 @@ public class Registartion {
 	private String email;
 	@Column(name="businessaddress")
 	private String businessAddress;
+	@Column(name="pincode")
+	private String pinCode;
 	
 	
 	@Column(name="city")
@@ -37,9 +41,34 @@ public class Registartion {
 	private String website;
 	@Column(name="category")
 	private String category;
+	@Column(name="reg_proof_id")
+	private String regProof;
 	@Column(name="reg")
 	private String reg;
 	
+	public Registartion() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public long getOwnerRegId() {
+		return ownerRegId;
+	}
+	public void setOwnerRegId(long ownerRegId) {
+		this.ownerRegId = ownerRegId;
+	}
+	public String getPinCode() {
+		return pinCode;
+	}
+	public void setPinCode(String pinCode) {
+		this.pinCode = pinCode;
+	}
+	public String getRegProof() {
+		return regProof;
+	}
+	public void setRegProof(String regProof) {
+		this.regProof = regProof;
+	}
 	public String getCity() {
 		return city;
 	}
